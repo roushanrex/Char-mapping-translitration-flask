@@ -43,12 +43,12 @@ def transString(string, reverse=0):
     return string
  
 
-@app.route("/")
+@app.route('/', methods=['GET', 'POST'])
 def home():
     return render_template('home.html')
 
 
-@app.route("/predict", methods=['GET', 'POST'])
+@app.route('/predict', methods = ['POST', "GET"])
 def predict():
     
     if request.method == 'POST':
